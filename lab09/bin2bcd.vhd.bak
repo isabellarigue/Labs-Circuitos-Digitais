@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity bin2bcd is
+	-- Converte um binario (8-bits) para decimal BCD.
+	-- Formula: bin = 10*dec + un = ((dec + dec<<2) << 1) + un
+	port (
+		bin:		in std_logic_vector(7 downto 0);
+		dec, un:	out std_logic_vector(3 downto 0);
+	);
+end;

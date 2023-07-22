@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec3_to_8 is
+  port (
+    w : in std_logic_vector(2 downto 0);
+    y : out std_logic_vector(7 downto 0)
+  );
+end dec3_to_8;
+
+architecture rtl of dec3_to_8 is
+begin
+  -- Your code here
+end rtl;
+

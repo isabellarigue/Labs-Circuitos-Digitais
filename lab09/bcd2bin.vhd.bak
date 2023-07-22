@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity bcd2bin is
+	-- Converte um decimal BCD para binario (8-bits).
+	port (
+		dec, un:		in std_logic_vector(3 downto 0);
+		bin:	out std_logic_vector(7 downto 0);
+	);
+end;
+
+architecture rtl of bcd2bin is
+	signal i_count: unsigned(bit_width-1 downto 0) := to_unsigned(0, bit_width);
+begin
+	count <= std_logic_vector(i_count);
+end;

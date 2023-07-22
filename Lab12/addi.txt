@@ -1,0 +1,7 @@
+Para implementar o ADDI, foram necessárias as seguintes mudanças:
+
+1. Criar um circuito de extensão de sinal para gerar o valor de 32 bits do imediato a partir dos 16 bits codificados na instrução.
+
+2. Criar um novo caminho de dados para que a ALU possa escolher entre o valor lido do registrador e o valor do imediato. Para isso, foi usado um multiplexador e um sinal (ALU_Src) que só é ligado nas intruções que usam imediato.
+
+3. A unidade de controle (UC) precisou receber todos os bits do opcode (6 bits) ao invés de só os 3 primeiros bits, para conseguir diferenciar o ADD do ADDI. Na UC foi adicionado o novo sinal (ALU_Src) no estágio EX.

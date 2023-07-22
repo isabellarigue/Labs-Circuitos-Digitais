@@ -1,0 +1,3 @@
+Para implementar o HALT, foi criada uma variável de estado que diz se o processador foi interrompido (halted) ou não. A variável é setada para 0 toda vez que a CPU recebe o sinal clear externo, caso contrário o estado inicial da CPU poderia ser indefinido.
+
+A variável 'halted' só é ligada quando a instrução HALT chega no estágio de execução (EX). Quando ativada, o processor não retorna para o estágio de FETCH e não executa novas instruções.
